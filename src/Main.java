@@ -3,6 +3,7 @@ import java.util.Scanner;
 void main() {
 
     Scanner scan = new Scanner(System.in);
+    Building build = new Building();
     int choice;
 
     do{
@@ -23,14 +24,10 @@ void main() {
             System.out.print("Enter Number of Floors: ");
             int buildFloor = scan.nextInt();
 
-            System.out.println("=============");
-            System.out.println("Building Name: " + buildName);
-            System.out.println("Building Address: " + buildAddress);
-            System.out.println("Number of Floors: " + buildFloor);
-            System.out.println("=============");
-            System.out.println("Building Added Successfully");
+            build.assignData(buildName, buildAddress, buildFloor);
+
         } else if (choice == 2) {
-            System.out.println("Under Construction");
+            build.showData();
         } else {
             break;
         }
